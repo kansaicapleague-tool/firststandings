@@ -2,8 +2,8 @@
 <html lang="ja">
 <head>
 <meta charset="utf-8">
-<meta name="description" content="webページの概要">
-<meta name="keywords" content="半角コンマ(,)でキーワードを区切って入力">
+<meta name="description" content="関西キャップリーグ1部順位表">
+<!-- <meta name="keywords" content="半角コンマ(,)でキーワードを区切って入力"> -->
 <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,42 +17,78 @@
     </header>
     <main>
         <!-- 入力フォーム -->
-        <label>1位チーム:<input type="text" id="firstTeam"></label>
-        <label>勝:<input type="text" id="firstTeamWin"></label>
-        <label>負:<input type="text" id="firstTeamLose"></label>
-        <label>分:<input type="text" id="firstTeamDraw"></label><br>
-        <label>2位チーム:<input type="text" id="secondTeam"></label>
-        <label>勝:<input type="text" id="secondTeamWin"></label>
-        <label>負:<input type="text" id="secondTeamLose"></label>
-        <label>分:<input type="text" id="secondTeamDraw"></label><br>
-        <label>3位チーム:<input type="text" id="thirdTeam"></label>
-        <label>勝:<input type="text" id="thirdTeamWin"></label>
-        <label>負:<input type="text" id="thirdTeamLose"></label>
-        <label>分:<input type="text" id="thirdTeamDraw"></label><br>
-        <label>4位チーム:<input type="text" id="forthTeam"></label>
-        <label>勝:<input type="text" id="forthTeamWin"></label>
-        <label>負:<input type="text" id="forthTeamLose"></label>
-        <label>分:<input type="text" id="forthTeamDraw"></label><br>
-        <label>5位チーム:<input type="text" id="fifthTeam"></label>
-        <label>勝:<input type="text" id="fifthTeamWin"></label>
-        <label>負:<input type="text" id="fifthTeamLose"></label>
-        <label>分:<input type="text" id="fifthTeamDraw"></label><br>
-        <label>6位チーム:<input type="text" id="sixthTeam"></label>
-        <label>勝:<input type="text" id="sixthTeamWin"></label>
-        <label>負:<input type="text" id="sixthTeamLose"></label>
-        <label>分:<input type="text" id="sixthTeamDraw"></label><br>
+        <label>1位チーム:<input type="text" id="firstTeam" size="10"></label>
+        <label>勝:<input type="number" id="firstTeamWin" step="1"></label>
+        <label>負:<input type="number" id="firstTeamLose" step="1"></label>
+        <label>分:<input type="number" id="firstTeamDraw" step="1"></label><br>
+        <label>2位チーム:<input type="text" id="secondTeam" size="10"></label>
+        <label>勝:<input type="number" id="secondTeamWin" step="1"></label>
+        <label>負:<input type="number" id="secondTeamLose" step="1"></label>
+        <label>分:<input type="number" id="secondTeamDraw" step="1"></label><br>
+        <label>3位チーム:<input type="text" id="thirdTeam" size="10"></label>
+        <label>勝:<input type="number" id="thirdTeamWin" step="1"></label>
+        <label>負:<input type="number" id="thirdTeamLose" step="1"></label>
+        <label>分:<input type="number" id="thirdTeamDraw" step="1"></label><br>
+        <label>4位チーム:<input type="text" id="forthTeam" size="10"></label>
+        <label>勝:<input type="number" id="forthTeamWin" step="1"></label>
+        <label>負:<input type="number" id="forthTeamLose" step="1"></label>
+        <label>分:<input type="number" id="forthTeamDraw" step="1"></label><br>
+        <label>5位チーム:<input type="text" id="fifthTeam" size="10"></label>
+        <label>勝:<input type="number" id="fifthTeamWin" step="1"></label>
+        <label>負:<input type="number" id="fifthTeamLose" step="1"></label>
+        <label>分:<input type="number" id="fifthTeamDraw" step="1"></label><br>
+        <label>6位チーム:<input type="text" id="sixthTeam" size="10"></label>
+        <label>勝:<input type="number" id="sixthTeamWin" step="1"></label>
+        <label>負:<input type="number" id="sixthTeamLose" step="1"></label>
+        <label>分:<input type="number" id="sixthTeamDraw" step="1"></label><br>
         <input type="button" value="確認" id="checkButton">
         <input type="button" value="ダウンロード" id="downloadButton"><br>
 
     </main>
     <div id="target" class="image">
         <img src="firststandingsbackground.jpg" />
+
         <p id="firstTeamname"></p>
+        <p id="firstGameText"></p>
+        <p id="firstWin"></p>
+        <p id="firstLose"></p>
+        <p id="firstDraw"></p>
+        <p id="firstPoint"></p>
+
         <p id="secondTeamname"></p>
+        <p id="secondGameText"></p>
+        <p id="secondWin"></p>
+        <p id="secondLose"></p>
+        <p id="secondDraw"></p>
+        <p id="secondPoint"></p>
+
         <p id="thirdTeamname"></p>
+        <p id="thirdGameText"></p>
+        <p id="thirdWin"></p>
+        <p id="thirdLose"></p>
+        <p id="thirdDraw"></p>
+        <p id="thirdPoint"></p>
+
         <p id="forthTeamname"></p>
+        <p id="forthGameText"></p>
+        <p id="forthWin"></p>
+        <p id="forthLose"></p>
+        <p id="forthDraw"></p>
+        <p id="forthPoint"></p>
+
         <p id="fifthTeamname"></p>
-        <p id="sixthTeamname"></p>	
+        <p id="fifthGameText"></p>
+        <p id="fifthWin"></p>
+        <p id="fifthLose"></p>
+        <p id="fifthDraw"></p>
+        <p id="fifthPoint"></p>
+
+        <p id="sixthTeamname"></p>
+        <p id="sixthGameText"></p>
+        <p id="sixthWin"></p>
+        <p id="sixthLose"></p>
+        <p id="sixthDraw"></p>
+        <p id="sixthPoint"></p>
     </div>
 
     <script src="index.js"></script>

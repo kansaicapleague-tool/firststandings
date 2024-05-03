@@ -1,30 +1,51 @@
 function checkClick(){
     firstTeamname.textContent = firstTeam.value;
-    //firstTeamname.innerText = firstTeam.value;
+    firstWin.textContent = firstTeamWin.value;
+    firstLose.textContent = firstTeamLose.value;
+    firstDraw.textContent = firstTeamDraw.value;
+    firstGameText.textContent = parseInt(firstTeamWin.value) +  parseInt(firstTeamLose.value) + parseInt(firstTeamDraw.value);
+    firstPoint.textContent = parseInt(firstTeamWin.value)*3.0 + parseInt(firstTeamDraw.value);
+    
     secondTeamname.textContent = secondTeam.value;
+    secondWin.textContent = secondTeamWin.value;
+    secondLose.textContent = secondTeamLose.value;
+    secondDraw.textContent = secondTeamDraw.value;
+    secondGameText.textContent = parseInt(secondTeamWin.value) +  parseInt(secondTeamLose.value) + parseInt(secondTeamDraw.value);
+    secondPoint.textContent = parseInt(secondTeamWin.value)*3.0 + parseInt(secondTeamDraw.value);
+
     thirdTeamname.textContent = thirdTeam.value;
+    thirdWin.textContent = thirdTeamWin.value;
+    thirdLose.textContent = thirdTeamLose.value;
+    thirdDraw.textContent = thirdTeamDraw.value;
+    thirdGameText.textContent = parseInt(thirdTeamWin.value) +  parseInt(thirdTeamLose.value) + parseInt(thirdTeamDraw.value);
+    thirdPoint.textContent = parseInt(thirdTeamWin.value)*3.0 + parseInt(thirdTeamDraw.value);
+
     forthTeamname.textContent = forthTeam.value;
+    forthWin.textContent = forthTeamWin.value;
+    forthLose.textContent = forthTeamLose.value;
+    forthDraw.textContent = forthTeamDraw.value;
+    forthGameText.textContent = parseInt(forthTeamWin.value) +  parseInt(forthTeamLose.value) + parseInt(forthTeamDraw.value);
+    forthPoint.textContent = parseInt(forthTeamWin.value)*3.0 + parseInt(forthTeamDraw.value);
+
     fifthTeamname.textContent = fifthTeam.value;
+    fifthWin.textContent = fifthTeamWin.value;
+    fifthLose.textContent = fifthTeamLose.value;
+    fifthDraw.textContent = fifthTeamDraw.value;
+    fifthGameText.textContent = parseInt(fifthTeamWin.value) +  parseInt(fifthTeamLose.value) + parseInt(fifthTeamDraw.value);
+    fifthPoint.textContent = parseInt(fifthTeamWin.value)*3.0 + parseInt(fifthTeamDraw.value);
+
     sixthTeamname.textContent = sixthTeam.value;
+    sixthWin.textContent = sixthTeamWin.value;
+    sixthLose.textContent = sixthTeamLose.value;
+    sixthDraw.textContent = sixthTeamDraw.value;
+    sixthGameText.textContent = parseInt(sixthTeamWin.value) +  parseInt(sixthTeamLose.value) + parseInt(sixthTeamDraw.value);
+    sixthPoint.textContent = parseInt(sixthTeamWin.value)*3.0 + parseInt(sixthTeamDraw.value);
 }
 
 function downloadClick(){
     html2canvas(document.querySelector("#target")).then(canvas => {
         document.body.appendChild(canvas)
     });
-
-    // const el = document.querySelector("#target");
-    // if (!el) {
-    //   console.error("要素が見つかりませんでした。");
-    //   return;
-    // }
-  
-    // html2canvas(el).then((canvasEl) => {
-    //   const aEl = document.createElement("a");
-    //   aEl.href = canvasEl.toDataURL("image/jpg");
-    //   aEl.download = "result.jpg";
-    //   aEl.click();
-    // });
 }
   
   let firstTeam = document.getElementById('firstTeam');
@@ -39,6 +60,50 @@ function downloadClick(){
   let fifthTeamname = document.getElementById('fifthTeamname');
   let sixthTeam = document.getElementById('sixthTeam');
   let sixthTeamname = document.getElementById('sixthTeamname');
+
+  let firstWin = document.getElementById('firstWin');
+  let firstTeamWin = document.getElementById('firstTeamWin');
+  let firstLose = document.getElementById('firstLose');
+  let firstTeamLose = document.getElementById('firstTeamLose');
+  let firstDraw = document.getElementById('firstDraw');
+  let firstTeamDraw = document.getElementById('firstTeamDraw');
+  var firstGameText = document.getElementById('firstGameText');
+  var firstPoint = document.getElementById('firstPoint');
+
+  let secondWin = document.getElementById('secondWin');
+  let secondTeamWin = document.getElementById('secondTeamWin');
+  let secondLose = document.getElementById('secondLose');
+  let secondTeamLose = document.getElementById('secondTeamLose');
+  let secondDraw = document.getElementById('secondDraw');
+  let secondTeamDraw = document.getElementById('secondTeamDraw');
+
+  let thirdWin = document.getElementById('thirdWin');
+  let thirdTeamWin = document.getElementById('thirdTeamWin');
+  let thirdLose = document.getElementById('thirdLose');
+  let thirdTeamLose = document.getElementById('thirdTeamLose');
+  let thirdDraw = document.getElementById('thirdDraw');
+  let thirdTeamDraw = document.getElementById('thirdTeamDraw');
+
+  let forthWin = document.getElementById('forthWin');
+  let forthTeamWin = document.getElementById('forthTeamWin');
+  let forthLose = document.getElementById('forthLose');
+  let forthTeamLose = document.getElementById('forthTeamLose');
+  let forthDraw = document.getElementById('forthDraw');
+  let forthTeamDraw = document.getElementById('forthTeamDraw');
+
+  let fifthWin = document.getElementById('fifthWin');
+  let fifthTeamWin = document.getElementById('fifthTeamWin');
+  let fifthLose = document.getElementById('fifthLose');
+  let fifthTeamLose = document.getElementById('fifthTeamLose');
+  let fifthDraw = document.getElementById('fifthDraw');
+  let fifthTeamDraw = document.getElementById('fifthTeamDraw');
+
+  let sixthWin = document.getElementById('sixthWin');
+  let sixthTeamWin = document.getElementById('sixthTeamWin');
+  let sixthLose = document.getElementById('sixthLose');
+  let sixthTeamLose = document.getElementById('sixthTeamLose');
+  let sixthDraw = document.getElementById('sixthDraw');
+  let sixthTeamDraw = document.getElementById('sixthTeamDraw');
   
   let checkButton = document.getElementById('checkButton');
   checkButton.addEventListener('click', checkClick);
