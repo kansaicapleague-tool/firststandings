@@ -40,13 +40,31 @@ function checkClick(){
     sixthDraw.textContent = sixthTeamDraw.value;
     sixthGameText.textContent = parseInt(sixthTeamWin.value) +  parseInt(sixthTeamLose.value) + parseInt(sixthTeamDraw.value);
     sixthPoint.textContent = parseInt(sixthTeamWin.value)*3.0 + parseInt(sixthTeamDraw.value);
+
+    html2canvas(document.getElementById("target")).then(canvas => {
+        document.body.appendChild(canvas)
+        canvas.id = "canvas"
+      });
 }
 
 function downloadClick(){
-    html2canvas(document.querySelector("#target")).then(canvas => {
-        document.body.appendChild(canvas)
-    });
+    var canvas = document.getElementById("canvas");
+    const name = 'firststandings.png';
+    const a = document.createElement('a');
+
+    a.href = canvas.toDataURL();
+    a.download = name;
+    a.click();
 }
+
+// function downloadImage(dataUrl) {
+//     const name = 'firststandings.png';
+//     const a = document.createElement('a');
+
+//     a.href = dataUrl;
+//     a.download = name;
+//     a.click();
+//   }
   
   let firstTeam = document.getElementById('firstTeam');
   let firstTeamname = document.getElementById('firstTeamname');
