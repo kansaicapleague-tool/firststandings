@@ -57,14 +57,13 @@ function downloadClick(){
     a.click();
 }
 
-// function downloadImage(dataUrl) {
-//     const name = 'firststandings.png';
-//     const a = document.createElement('a');
+var today=new Date();
+var year = today.getFullYear();
+var month = today.getMonth()+1;
+var day = today.getDate();
 
-//     a.href = dataUrl;
-//     a.download = name;
-//     a.click();
-//   }
+var now = year +"年"+ month + "月" + day + "日時点";
+document.getElementById("now").innerHTML = now;
   
   let firstTeam = document.getElementById('firstTeam');
   let firstTeamname = document.getElementById('firstTeamname');
