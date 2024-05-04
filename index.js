@@ -1,4 +1,10 @@
 function checkClick(){
+    html2canvas(document.getElementById("target")).then(canvas => {
+        document.body.appendChild(canvas)
+        canvas.id = "canvas"
+      });
+}
+function changeClick(){
     firstTeamname.textContent = firstTeam.value;
     firstWin.textContent = firstTeamWin.value;
     firstLose.textContent = firstTeamLose.value;
@@ -40,11 +46,6 @@ function checkClick(){
     sixthDraw.textContent = sixthTeamDraw.value;
     sixthGameText.textContent = parseInt(sixthTeamWin.value) +  parseInt(sixthTeamLose.value) + parseInt(sixthTeamDraw.value);
     sixthPoint.textContent = parseInt(sixthTeamWin.value)*3.0 + parseInt(sixthTeamDraw.value);
-
-    html2canvas(document.getElementById("target")).then(canvas => {
-        document.body.appendChild(canvas)
-        canvas.id = "canvas"
-      });
 }
 
 function downloadClick(){
