@@ -123,6 +123,8 @@ document.getElementById("now").innerHTML = now;
   let sixthDraw = document.getElementById('sixthDraw');
   let sixthTeamDraw = document.getElementById('sixthTeamDraw');
   
+  let changeButton = document.getElementById('changeButton');
+  changeButton.addEventListener('click', changeClick);
   let checkButton = document.getElementById('checkButton');
   checkButton.addEventListener('click', checkClick);
   let downloadButton = document.getElementById('downloadButton');
